@@ -1,0 +1,12 @@
+apiVersion: platform.example.org/v1alpha1
+kind: AppStack
+metadata:
+  name: orders-auto
+  namespace: default
+spec:
+  environment: dev
+  team: orders
+  crossplane:
+    compositionRef:
+      name: appstack-local
+    compositionUpdatePolicy: Automatic

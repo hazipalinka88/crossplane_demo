@@ -1,0 +1,12 @@
+apiVersion: platform.example.org/v1alpha1
+kind: AppStack
+metadata:
+  name: orders-manual
+  namespace: default
+spec:
+  environment: staging
+  team: orders
+  crossplane:
+    compositionRef:
+      name: appstack-local
+    compositionUpdatePolicy: Manual
