@@ -1,0 +1,12 @@
+apiVersion: platform.example.org/v1alpha1
+kind: AppStack
+metadata:
+  name: inventory-dev
+  namespace: default
+spec:
+  environment: dev
+  team: inventory
+  crossplane:
+    compositionRef:
+      name: appstack-local
+    compositionUpdatePolicy: Automatic
